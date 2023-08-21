@@ -1,10 +1,11 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import { HomePage } from "./src/modules/@Main/presentation/pages/HomePage";
+import { ChakraProvider, GlobalStyle } from '@chakra-ui/react';
+import { MainPage } from './src/modules/@Main/presentation/pages/MainPage';
 
 export function App() {
-  return (
-    <ChakraProvider>
-      <HomePage />
-    </ChakraProvider>
-  );
+	return (
+		<ChakraProvider>
+			<MainPage />
+			<GlobalStyle />
+		</ChakraProvider>
+	);
 }
