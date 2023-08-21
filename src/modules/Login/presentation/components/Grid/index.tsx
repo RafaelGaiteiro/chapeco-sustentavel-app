@@ -6,4 +6,5 @@ export const Grid = styled.div`
 	grid-template-rows: 80px auto auto;
 	grid-row-gap: 16px;
 	height: 100vh;
+	width: 100%;
 `;
