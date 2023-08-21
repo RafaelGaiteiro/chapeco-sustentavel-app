@@ -29,7 +29,7 @@ export function Header() {
 
 const HeaderStylized = styled.div`
 	padding: 16px;
-	background-color: #03c988;
+	background-color: ${({ theme }) => theme.colors.green};
 	width: 100%;
 `;
 
@@ -42,14 +42,14 @@ const TimeBox = styled.div`
 
 const TimeTitle = styled.div`
 	font-family: 'Poppins', sans-serif;
-	color: white;
+	color: ${({ theme }) => theme.colors.white};
 	font-size: 16px;
 	font-weight: 500;
 `;
 
 const CurrentTime = styled.div`
 	font-family: 'Poppins', sans-serif;
-	color: white;
+	color: ${({ theme }) => theme.colors.white};
 	font-size: 32px;
 	font-weight: 700;
 `;

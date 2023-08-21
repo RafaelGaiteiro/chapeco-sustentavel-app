@@ -37,11 +37,11 @@ const BoxGreen = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	padding: 16px;
-	background-color: #03c988;
+	background-color: ${({ theme }) => theme.colors.green};
 `;
 
 const BoxGray = styled.div`
-	background-color: #f5f5f5;
+	background-color: ${({ theme }) => theme.colors.lightGray};
 `;
 
 const Logo = styled.img``;
@@ -52,7 +52,7 @@ const TitleButton = styled.div`
 	justify-content: flex-start;
 	width: 100%;
 	font-family: 'Poppins', sans-serif;
-	color: white;
+	color: ${({ theme }) => theme.colors.white};
 	font-size: 20px;
 	font-weight: 700;
 `;
@@ -63,7 +63,7 @@ const TextButton = styled.div`
 	justify-content: flex-start;
 	width: 100%;
 	font-family: 'Poppins', sans-serif;
-	color: white;
+	color: ${({ theme }) => theme.colors.white};
 	font-size: 16px;
 	font-weight: 500;
 `;
