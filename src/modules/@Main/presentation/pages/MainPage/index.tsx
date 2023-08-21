@@ -1,12 +1,13 @@
-import { Box } from '@chakra-ui/react';
+import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
+import { MainGrid } from '../../components/MainGrid';
 import { ModuleBox } from '../../components/ModuleComponents/ModuleBox';
 import { ModuleButton } from '../../components/ModuleComponents/ModuleButton';
 import { Welcome } from '../../components/Welcome';
 
 export function MainPage() {
 	return (
-		<Box display='flex' flexDirection='column' gap='16px'>
+		<MainGrid>
 			<Header />
 			<Welcome />
 			<ModuleBox>
@@ -14,6 +15,7 @@ export function MainPage() {
 				<ModuleButton data={{ title: 'Ponto de Coleta', texts: ['Ver pontos', 'Criar Ponto'] }} src='' />
 				<ModuleButton data={{ title: 'Educativo', texts: ['Materiais', 'Separação correta'] }} src='' />
 			</ModuleBox>
-		</Box>
+			<Footer />
+		</MainGrid>
 	);
 }

@@ -5,15 +5,17 @@ export function Header() {
 	const [currentTime, setCurrentTime] = useState('');
 
 	useEffect(() => {
-		const timer = setInterval(() => {
+		function updateTime() {
 			const date = new Date();
-			const hora = String(date.getHours()).padStart(2, '0'); // 0-23
-			const min = String(date.getMinutes()).padStart(2, '0'); // 0-59
-			const seg = String(date.getSeconds()).padStart(2, '0'); // 0-59
+			const hora = String(date.getHours()).padStart(2, '0');
+			const min = String(date.getMinutes()).padStart(2, '0');
+			const seg = String(date.getSeconds()).padStart(2, '0');
 			setCurrentTime(`${hora}:${min}:${seg}`);
-		}, 1000);
+		}
 
-		// Limpa o intervalo quando o componente é desmontado
+		const timer = setInterval(updateTime, 1000);
+		updateTime();
+
 		return () => clearInterval(timer);
 	}, []);
 
@@ -21,16 +23,20 @@ export function Header() {
 		<HeaderStylized>
 			<TimeBox>
 				<TimeTitle>Horário Atual</TimeTitle>
-				<CurrentTime>{currentTime}</CurrentTime>
+				<CurrentTime aria-live='polite'>{currentTime}</CurrentTime>
 			</TimeBox>
 		</HeaderStylized>
 	);
 }
 
 const HeaderStylized = styled.div`
+	display: flex;
+	align-items: center;
 	padding: 16px;
 	background-color: ${({ theme }) => theme.colors.green};
 	width: 100%;
+	height: 100%;
+	user-select: none;
 `;
 
 const TimeBox = styled.div`

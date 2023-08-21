@@ -30,10 +30,15 @@ export function Welcome() {
 }
 
 const WelcomeStylized = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background-color: ${({ theme }) => theme.colors.green};
-	padding: 16px;
+	padding: 0 16px;
 	width: 90%;
+	height: 100%;
 	border-radius: 0 8px 8px 0;
+	user-select: none;
 `;
 
 const TitleWecolme = styled.div`

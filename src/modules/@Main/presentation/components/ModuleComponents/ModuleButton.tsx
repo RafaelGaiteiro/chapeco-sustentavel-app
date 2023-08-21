@@ -30,6 +30,13 @@ const BoxButton = styled.div`
 	width: 90%;
 	border-radius: 16px;
 	overflow: hidden;
+	user-select: none;
+	transition: all 0.2s ease-in-out;
+
+	&:active {
+		cursor: pointer;
+		scale: 1.02;
+	}
 `;
 
 const BoxGreen = styled.div`
