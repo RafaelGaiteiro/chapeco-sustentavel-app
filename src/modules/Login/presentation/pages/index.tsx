@@ -1,8 +1,8 @@
-import { Box, Button, FormControl, FormLabel, Input, Link, Stack, Text } from '@chakra-ui/react';
-import { Header } from '../../../../app/components/shared/Header';
-import { Grid } from '../components/Grid';
+import { Box, Button, FormControl, FormLabel, Input, Link, Stack } from '@chakra-ui/react';
 import { useTheme } from 'styled-components';
+import { Header } from '../../../../app/components/shared/Header';
 import { Footer } from '../components/Footer';
+import { Grid } from '../components/Grid';
 
 export function Login() {
 	const { colors } = useTheme();
