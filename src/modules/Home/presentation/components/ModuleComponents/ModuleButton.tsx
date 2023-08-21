@@ -33,6 +33,7 @@ const BoxButton = styled.div`
 	overflow: hidden;
 	user-select: none;
 	transition: all 0.2s ease-in-out;
+	max-width: 600px;
 
 	&:active {
 		cursor: pointer;

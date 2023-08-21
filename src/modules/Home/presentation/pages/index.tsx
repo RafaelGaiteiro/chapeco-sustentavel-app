@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
+import { Footer } from '../../../../app/components/shared/Footer';
+import { Header } from '../../../../app/components/shared/Header';
 import { MainGrid } from '../components/MainGrid';
 import { ModuleBox } from '../components/ModuleComponents/ModuleBox';
 import { ModuleButton } from '../components/ModuleComponents/ModuleButton';

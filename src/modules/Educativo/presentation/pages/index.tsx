@@ -1,12 +1,11 @@
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
+import { Footer } from '../../../../app/components/shared/Footer';
+import { Header } from '../../../../app/components/shared/Header';
 import { MainGrid } from '../components/MainGrid';
 
 export function Educativo() {
 	return (
 		<MainGrid>
-			<Header />
-			ss
+			<Header toGoBack />
 			<Footer />
 		</MainGrid>
 	);
