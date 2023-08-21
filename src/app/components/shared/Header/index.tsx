@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { BsFillGearFill } from 'react-icons/bs';
+import { MdExitToApp, MdOutlineArrowBackIos } from 'react-icons/md';
+import { HiInformationCircle } from 'react-icons/hi';
 import styled from 'styled-components';
-import { MdOutlineArrowBackIos } from 'react-icons/md';
-
+import { ButtonAnimation } from '../ButtonAnimation';
 interface HeaderProps {
 	toGoBack?: boolean;
 }
@@ -27,14 +29,25 @@ export function Header({ toGoBack }: HeaderProps) {
 	return (
 		<HeaderStylized>
 			{toGoBack && (
-				<BoxBackButton>
+				<ButtonAnimation>
 					<MdOutlineArrowBackIos color='white' size={25} onClick={() => window.history?.back()} />
-				</BoxBackButton>
+				</ButtonAnimation>
 			)}
 			<TimeBox>
 				<TimeTitle>Horário Atual</TimeTitle>
 				<CurrentTime aria-live='polite'>{currentTime}</CurrentTime>
 			</TimeBox>
+			<TopButtons>
+				<ButtonAnimation>
+					<HiInformationCircle color='white' size='48px' />
+				</ButtonAnimation>
+				<ButtonAnimation>
+					<BsFillGearFill color='white' size='40px' />
+				</ButtonAnimation>
+				<ButtonAnimation>
+					<MdExitToApp color='white' size='48px' />
+				</ButtonAnimation>
+			</TopButtons>
 		</HeaderStylized>
 	);
 }
@@ -48,6 +61,7 @@ const HeaderStylized = styled.div`
 	width: 100%;
 	height: 100%;
 	user-select: none;
+	transition: 0.2s ease-in-out;
 `;
 
 const TimeBox = styled.div`
@@ -71,20 +85,10 @@ const CurrentTime = styled.div`
 	font-weight: 700;
 `;
 
-const BoxBackButton = styled.div`
+const TopButtons = styled.div`
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	transition: background-color 0.2s ease-in-out;
-
-	&&:hover {
-		background-color: rgba(255, 255, 255, 0.1);
-	}
-
-	&&:active {
-		background-color: rgba(255, 255, 255, 0.2);
-	}
+	column-gap: 16px;
 `;
