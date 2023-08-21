@@ -11,7 +11,7 @@ export function Home() {
 
 	return (
 		<MainGrid>
-			<Header />
+			<Header configurations exit information />
 			<Welcome />
 			<ModuleBox>
 				<ModuleButton

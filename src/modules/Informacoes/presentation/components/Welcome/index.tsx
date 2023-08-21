@@ -36,7 +36,7 @@ const WelcomeStylized = styled.div`
 	background-color: ${({ theme }) => theme.colors.green};
 	padding: 0 16px;
 	width: 90%;
-	max-width: 600px;
+	height: 100%;
 	border-radius: 0 8px 8px 0;
 	user-select: none;
 `;

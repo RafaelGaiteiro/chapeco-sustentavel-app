@@ -4,12 +4,17 @@ import { MdExitToApp, MdOutlineArrowBackIos } from 'react-icons/md';
 import { HiInformationCircle } from 'react-icons/hi';
 import styled from 'styled-components';
 import { ButtonAnimation } from '../ButtonAnimation';
+import { useNavigate } from 'react-router-dom';
 interface HeaderProps {
 	toGoBack?: boolean;
+	information?: boolean;
+	configurations?: boolean;
+	exit?: boolean;
 }
 
-export function Header({ toGoBack }: HeaderProps) {
+export function Header({ toGoBack, configurations, exit, information }: HeaderProps) {
 	const [currentTime, setCurrentTime] = useState('');
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		function updateTime() {
@@ -38,15 +43,21 @@ export function Header({ toGoBack }: HeaderProps) {
 				<CurrentTime aria-live='polite'>{currentTime}</CurrentTime>
 			</TimeBox>
 			<TopButtons>
-				<ButtonAnimation>
-					<HiInformationCircle color='white' size='48px' />
-				</ButtonAnimation>
-				<ButtonAnimation>
-					<BsFillGearFill color='white' size='40px' />
-				</ButtonAnimation>
-				<ButtonAnimation>
-					<MdExitToApp color='white' size='48px' />
-				</ButtonAnimation>
+				{information && (
+					<ButtonAnimation>
+						<HiInformationCircle color='white' size='48px' onClick={() => navigate('/informacoes')} />
+					</ButtonAnimation>
+				)}
+				{configurations && (
+					<ButtonAnimation>
+						<BsFillGearFill color='white' size='40px' onClick={() => navigate('/configuracoes')} />
+					</ButtonAnimation>
+				)}
+				{exit && (
+					<ButtonAnimation>
+						<MdExitToApp color='white' size='48px' onClick={() => navigate('/')} />
+					</ButtonAnimation>
+				)}
 			</TopButtons>
 		</HeaderStylized>
 	);
