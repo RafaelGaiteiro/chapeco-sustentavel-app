@@ -1,13 +1,14 @@
 import { ChakraProvider, GlobalStyle } from '@chakra-ui/react';
-import { MainPage } from './src/modules/@Main/presentation/pages/MainPage';
+import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { router } from './src/app/routes/router';
 import light from './src/assets/styles/themes/light';
 
 export function App() {
 	return (
 		<ThemeProvider theme={light}>
 			<ChakraProvider>
-				<MainPage />
+				<RouterProvider router={router} />
 				<GlobalStyle />
 			</ChakraProvider>
 		</ThemeProvider>
