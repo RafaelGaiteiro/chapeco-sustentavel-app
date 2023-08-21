@@ -1,12 +1,12 @@
-import { Footer } from '../../../../app/components/shared/Footer';
+import { Box } from '@chakra-ui/react';
 import { Header } from '../../../../app/components/shared/Header';
-import { MainGrid } from '../components/MainGrid';
+import { DefaultTemplate } from '../../../../app/components/templates/DefaultTheme';
 
 export function Educativo() {
 	return (
-		<MainGrid>
+		<DefaultTemplate defaultFooter>
 			<Header toGoBack />
-			<Footer />
-		</MainGrid>
+			<Box></Box>
+		</DefaultTemplate>
 	);
 }

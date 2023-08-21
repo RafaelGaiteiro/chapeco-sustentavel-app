@@ -1,12 +1,12 @@
+import { Box } from '@chakra-ui/react';
 import { Header } from '../../../../app/components/shared/Header';
-import { Footer } from '../../../../app/components/shared/Footer';
-import { MainGrid } from '../components/MainGrid';
+import { DefaultTemplate } from '../../../../app/components/templates/DefaultTheme';
 
 export function ColetaSeletiva() {
 	return (
-		<MainGrid>
+		<DefaultTemplate defaultFooter>
 			<Header toGoBack />
-			<Footer />
-		</MainGrid>
+			<Box></Box>
+		</DefaultTemplate>
 	);
 }
