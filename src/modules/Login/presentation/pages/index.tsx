@@ -1,8 +1,11 @@
 import { Box, Button, FormControl, FormLabel, Input, Stack } from '@chakra-ui/react';
 import { Header } from '../../../../app/components/shared/Header';
 import { Grid } from '../components/Grid';
+import { useTheme } from 'styled-components';
 
 export function Login() {
+	const { colors } = useTheme();
+
 	return (
 		<Grid>
 			<Header />
@@ -10,13 +13,15 @@ export function Login() {
 				<Stack>
 					<FormControl>
 						<FormLabel>Usuário</FormLabel>
-						<Input />
+						<Input focusBorderColor={colors.darkGreen} />
 					</FormControl>
 					<FormControl>
 						<FormLabel>Senha</FormLabel>
-						<Input />
+						<Input focusBorderColor={colors.darkGreen} />
 					</FormControl>
-					<Button colorScheme='green'>Entrar</Button>
+					<Button backgroundColor={colors.darkGreen} color={colors.white}>
+						Entrar
+					</Button>
 				</Stack>
 			</Box>
 		</Grid>
