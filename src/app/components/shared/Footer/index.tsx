@@ -1,13 +1,15 @@
 import { Box, Text } from '@chakra-ui/react';
 import { FcIdea } from 'react-icons/fc';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 export function Footer() {
+	const navigate = useNavigate();
 	return (
-		<FooterStylized>
+		<FooterStylized onClick={() => navigate('/ideiausuario')}>
 			<UserIdea>
 				<Box display='flex' justifyContent='center' alignItems='center' gap='8px'>
-					<Text fontSize='18px'>Gostaria de ver algo aqui?</Text>
+					<Text fontSize='18px'>Gostaria de ver sua ideia aqui?</Text>
 					<FcIdea size={25} />
 				</Box>
 				<Text fontSize='16px'>Conte para nós!</Text>
@@ -27,7 +29,7 @@ const FooterStylized = styled.div`
 	background-color: ${({ theme }) => theme.colors.green};
 	border-radius: 24px 24px 0 0;
 	user-select: none;
-	height: 100%;
+	height: 120px;
 `;
 
 const UserIdea = styled.div`
@@ -37,10 +39,15 @@ const UserIdea = styled.div`
 	border-radius: 8px;
 	border-width: 2px;
 	padding: 8px 16px;
+	cursor: pointer;
 	transition: 0.2s ease-in-out;
 
+	&&:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+
 	&&:active {
-		cursor: pointer;
+		background-color: rgba(255, 255, 255, 0.3);
 		scale: 1.02;
 	}
 `;

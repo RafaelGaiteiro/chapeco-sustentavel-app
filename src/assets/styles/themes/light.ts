@@ -1,7 +1,9 @@
 export default {
 	title: 'light',
 	colors: {
-		green: '#03c988',
+		// green: '#03c988',
+		// green: '#2F855A',
+		green: '#38A169',
 		white: '#ffffff',
 		lightGray: '#f5f5f5',
 		// complementary: '#c9036a',

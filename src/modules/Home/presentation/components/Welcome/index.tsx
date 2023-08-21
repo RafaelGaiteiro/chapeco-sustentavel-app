@@ -23,7 +23,7 @@ export function Welcome() {
 				<Img src={smile} alt='smile' w={6} />
 			</TitleWecolme>
 			<EarlyWarning>
-				A próxima Coleta Seletiva em sua residência ocorrerá aproximadamente ás <span>9:30h</span>
+				A próxima Coleta Seletiva está prevista para <span>hoje a tarde</span>.
 			</EarlyWarning>
 		</WelcomeStylized>
 	);
@@ -34,7 +34,7 @@ const WelcomeStylized = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	background-color: ${({ theme }) => theme.colors.green};
-	padding: 0 16px;
+	padding: 16px;
 	width: 90%;
 	max-width: 600px;
 	border-radius: 0 8px 8px 0;

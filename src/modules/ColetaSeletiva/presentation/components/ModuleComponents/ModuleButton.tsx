@@ -70,7 +70,7 @@ const TextButton = styled.div`
 	justify-content: flex-start;
 	width: 100%;
 	font-family: 'Poppins', sans-serif;
-	color: ${({ theme }) => theme.colors.white};
+	color: ${({ theme }) => theme.colors.green};
 	font-size: 16px;
 	font-weight: 500;
 `;
