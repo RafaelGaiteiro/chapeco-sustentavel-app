@@ -1,7 +1,7 @@
 {
     "name": "Chapecó Sustentável",
     "short_name": "Chapecó Sust.",
-    "start_url": "/",
+    "start_url": "https://chapeco-sustentavel-app.vercel.app/",
     "display": "standalone",
     "description": "Aplicativo sobre sustentabilidade em Chapecó.",
     "lang": "pt-BR",
