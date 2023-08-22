@@ -11,7 +11,7 @@ export function Home() {
 
 	return (
 		<DefaultTemplate defaultFooter>
-			<Header configurations exit information />
+			<Header time information configurations exit />
 			<Box display='flex' flexDirection='column' rowGap='16px'>
 				<Welcome />
 				<ModuleBox>
@@ -21,7 +21,7 @@ export function Home() {
 						onClick={() => navigate('/coletaseletiva')}
 					/>
 					<ModuleButton
-						data={{ title: 'Ponto de Coleta', texts: ['Ver pontos', 'Criar Ponto'] }}
+						data={{ title: 'Pontos de Coleta', texts: ['Ver pontos', 'Criar Ponto'] }}
 						src=''
 						onClick={() => navigate('/pontodecoleta')}
 					/>

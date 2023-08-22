@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 import { BsFillGearFill } from 'react-icons/bs';
-import { MdExitToApp, MdOutlineArrowBackIos } from 'react-icons/md';
 import { HiInformationCircle } from 'react-icons/hi';
+import { MdExitToApp, MdOutlineArrowBackIos } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { ButtonAnimation } from '../ButtonAnimation';
-import { useNavigate } from 'react-router-dom';
 interface HeaderProps {
 	toGoBack?: boolean;
 	information?: boolean;
 	configurations?: boolean;
 	exit?: boolean;
+	time?: boolean;
+	title?: string;
 }
 
-export function Header({ toGoBack, configurations, exit, information }: HeaderProps) {
+export function Header({ toGoBack, configurations, exit, information, time, title }: HeaderProps) {
 	const [currentTime, setCurrentTime] = useState('');
 	const navigate = useNavigate();
 
@@ -38,10 +40,12 @@ export function Header({ toGoBack, configurations, exit, information }: HeaderPr
 					<MdOutlineArrowBackIos color='white' size={25} onClick={() => window.history?.back()} />
 				</ButtonAnimation>
 			)}
-			<TimeBox>
-				<TimeTitle>Horário Atual</TimeTitle>
-				<CurrentTime aria-live='polite'>{currentTime}</CurrentTime>
-			</TimeBox>
+			{time && (
+				<TimeBox>
+					<TimeTitle>Horário Atual</TimeTitle>
+					<CurrentTime aria-live='polite'>{currentTime}</CurrentTime>
+				</TimeBox>
+			)}
 			<TopButtons>
 				{information && (
 					<ButtonAnimation>
@@ -58,6 +62,7 @@ export function Header({ toGoBack, configurations, exit, information }: HeaderPr
 						<MdExitToApp color='white' size='48px' onClick={() => navigate('/')} />
 					</ButtonAnimation>
 				)}
+				{title && <Title>{title}</Title>}
 			</TopButtons>
 		</HeaderStylized>
 	);
@@ -102,4 +107,11 @@ const TopButtons = styled.div`
 	justify-content: center;
 	align-items: center;
 	column-gap: 16px;
+`;
+
+const Title = styled.h1`
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	color: ${({ theme }) => theme.colors.white};
 `;

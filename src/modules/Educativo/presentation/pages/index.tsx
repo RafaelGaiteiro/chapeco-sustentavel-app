@@ -5,7 +5,7 @@ import { DefaultTemplate } from '../../../../app/components/templates/DefaultThe
 export function Educativo() {
 	return (
 		<DefaultTemplate defaultFooter>
-			<Header toGoBack />
+			<Header toGoBack title='Educativo' />
 			<Box></Box>
 		</DefaultTemplate>
 	);

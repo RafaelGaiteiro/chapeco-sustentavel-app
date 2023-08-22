@@ -5,7 +5,7 @@ import { DefaultTemplate } from '../../app/components/templates/DefaultTheme';
 export function NovaConta() {
 	return (
 		<DefaultTemplate>
-			<Header toGoBack />
+			<Header toGoBack title='Crie sua conta' />
 			<Box></Box>
 		</DefaultTemplate>
 	);

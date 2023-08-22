@@ -5,7 +5,7 @@ import { DefaultTemplate } from '../../../../app/components/templates/DefaultThe
 export function PontoDeColeta() {
 	return (
 		<DefaultTemplate defaultFooter>
-			<Header toGoBack />
+			<Header toGoBack title='Pontos De Coleta' />
 			<Box></Box>
 		</DefaultTemplate>
 	);

@@ -5,7 +5,7 @@ import { DefaultTemplate } from '../../../app/components/templates/DefaultTheme'
 export function Configuracoes() {
 	return (
 		<DefaultTemplate defaultFooter>
-			<Header toGoBack />
+			<Header toGoBack title='Configurações' />
 			<Box></Box>
 		</DefaultTemplate>
 	);

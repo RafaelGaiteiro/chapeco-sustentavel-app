@@ -8,7 +8,7 @@ export function Login() {
 
 	return (
 		<DefaultTemplate>
-			<Header />
+			<Header title='Login' />
 			<Box display='flex' flexDirection='column' justifyContent='center' alignContent='center' padding='16px'>
 				<Stack>
 					<FormControl>

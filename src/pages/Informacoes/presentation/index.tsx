@@ -5,7 +5,7 @@ import { DefaultTemplate } from '../../../app/components/templates/DefaultTheme'
 export function Informacoes() {
 	return (
 		<DefaultTemplate defaultFooter>
-			<Header toGoBack />
+			<Header toGoBack title='Informações' />
 			<Box></Box>
 		</DefaultTemplate>
 	);
