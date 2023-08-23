@@ -42,9 +42,9 @@ export function ColetaSeletiva() {
 		resolver: yupResolver(schema),
 	});
 
-	function onSubmit() {}
-
 	const cep = watch('cep');
+
+	function onSubmit() {}
 
 	useEffect(() => {
 		if (cep && (cep.length === 8 || cep.length === 9)) {
