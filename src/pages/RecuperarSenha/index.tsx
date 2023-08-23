@@ -5,7 +5,7 @@ import { DefaultTemplate } from '../../app/components/templates/DefaultTheme';
 export function RecuperarSenha() {
 	return (
 		<DefaultTemplate>
-			<Header toGoBack />
+			<Header toGoBack title='Recuperar Senha' />
 			<Box></Box>
 		</DefaultTemplate>
 	);
