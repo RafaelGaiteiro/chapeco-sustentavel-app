@@ -26,9 +26,9 @@ export function Login() {
 	function onSubmit() {}
 
 	return (
-		<DefaultTemplate>
-			<Header title='Login' />
-			<form onSubmit={handleSubmit(onSubmit)}>
+		<form onSubmit={handleSubmit(onSubmit)}>
+			<DefaultTemplate>
+				<Header title='Login' />
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' padding='16px'>
 					<Stack border='1px' borderColor='gray.200' padding='20px' w='100%' maxW='600px' rounded='8px'>
 						<FormControl>
@@ -50,7 +50,7 @@ export function Login() {
 						</Button>
 					</Stack>
 				</Box>
-			</form>
-		</DefaultTemplate>
+			</DefaultTemplate>
+		</form>
 	);
 }
