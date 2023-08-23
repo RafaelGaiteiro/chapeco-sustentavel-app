@@ -20,7 +20,6 @@ export function Login() {
 
 	const usuario = watch('usuario');
 	const senha = watch('senha');
-
 	const acesso = usuario === 'dev' && senha === 'dev';
 
 	return (
