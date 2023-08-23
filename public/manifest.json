@@ -19,10 +19,32 @@
     ],
     "screenshots": [
         {
-            "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
-            "sizes": "2880x1800",
-            "type": "image/png",
-            "description": "Uma captura de tela da página inicial do aplicativo."
+            "src": "https://github.com/RafaelGaiteiro/chapeco-sustentavel-app/blob/main/public/screenshots/750x1334-screenshot.png",
+            "sizes": "750x1334",
+            "type": "image/png"
+        },
+        {
+            "src": "https://github.com/RafaelGaiteiro/chapeco-sustentavel-app/blob/main/public/screenshots/1280x800-screenshot.png",
+            "sizes": "1280x800",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Sobre",
+            "url": "/about",
+            "description": "Aprenda mais sobre o Chapecó Sustentável."
+        },
+        {
+            "name": "Enviar Mensagem",
+            "url": "/new-message",
+            "description": "Abra um chat com outro usuário e envie uma mensagem."
+        }
+    ],
+    "protocol_handlers": [
+        {
+            "protocol": "web+chapeco",
+            "url": "/protocol-handler?url=%s"
         }
     ],
     "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
