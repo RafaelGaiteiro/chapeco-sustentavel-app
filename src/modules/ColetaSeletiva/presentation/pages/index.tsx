@@ -19,6 +19,8 @@ import { object, string } from 'yup';
 import { Header } from '../../../../app/components/shared/Header';
 import { DefaultTemplate } from '../../../../app/components/templates/DefaultTheme';
 import { viaCep } from '../../../../core/utils/viaCep';
+import { RegisteredAddress } from '../components/RegisteredAddress';
+import { registeredAddress } from '../constants/registeredAddress';
 
 const schema = object({
 	nomeDoEndereco: string().required('O nome do endereço é obrigatório.'),
@@ -31,7 +33,7 @@ const schema = object({
 });
 
 export function ColetaSeletiva() {
-	const registeredAddresses = false;
+	const registeredAddresses = true;
 	const {
 		register,
 		handleSubmit,
@@ -81,7 +83,15 @@ export function ColetaSeletiva() {
 						<AlertDescription maxWidth='sm'>Cadastre agora um endereço pelo formulário abaixo.</AlertDescription>
 					</Alert>
 				) : (
-					<Box>Endereços cadastrados botões</Box>
+					<Box>
+						{registeredAddress.map((registeredAddress) => (
+							<RegisteredAddress
+								adressName={registeredAddress.adressName}
+								collectionPeriod={registeredAddress.collectionPeriod}
+								fullAddress={registeredAddress.fullAddress}
+							/>
+						))}
+					</Box>
 				)}
 				<form onSubmit={handleSubmit(onSubmit)} noValidate>
 					<Box display='flex' justifyContent='center' padding='16px'>
