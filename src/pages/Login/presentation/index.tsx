@@ -14,13 +14,7 @@ const schema = object({
 export function Login() {
 	const navigate = useNavigate();
 
-	const {
-		register,
-		handleSubmit,
-		watch,
-		setValue,
-		formState: {},
-	} = useForm({
+	const { register, handleSubmit, watch } = useForm({
 		resolver: yupResolver(schema),
 	});
 
@@ -29,30 +23,34 @@ export function Login() {
 
 	const acesso = usuario === 'dev' && senha === 'dev';
 
+	function onSubmit() {}
+
 	return (
 		<DefaultTemplate>
 			<Header title='Login' />
-			<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' padding='16px'>
-				<Stack border='1px' borderColor='gray.200' padding='20px' w='100%' maxW='600px' rounded='8px'>
-					<FormControl>
-						<FormLabel>Usuário</FormLabel>
-						<Input placeholder='Digite o seu usuário' {...register('usuario')} />
-					</FormControl>
-					<FormControl>
-						<FormLabel>Senha</FormLabel>
-						<Input placeholder='Digite a sua senha' {...register('senha')} />
-					</FormControl>
-					<Link fontWeight={400} onClick={() => navigate('/recuperarsenha')}>
-						Esqueceu a senha?
-					</Link>
-					<Button colorScheme='green' onClick={() => acesso && navigate('/home')}>
-						Entrar
-					</Button>
-					<Button colorScheme='blue' onClick={() => navigate('/novaconta')}>
-						Criar uma Conta
-					</Button>
-				</Stack>
-			</Box>
+			<form onSubmit={handleSubmit(onSubmit)}>
+				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' padding='16px'>
+					<Stack border='1px' borderColor='gray.200' padding='20px' w='100%' maxW='600px' rounded='8px'>
+						<FormControl>
+							<FormLabel>Usuário</FormLabel>
+							<Input placeholder='Digite o seu usuário' {...register('usuario')} />
+						</FormControl>
+						<FormControl>
+							<FormLabel>Senha</FormLabel>
+							<Input placeholder='Digite a sua senha' {...register('senha')} />
+						</FormControl>
+						<Link fontWeight={400} onClick={() => navigate('/recuperarsenha')}>
+							Esqueceu a senha?
+						</Link>
+						<Button colorScheme='green' onClick={() => acesso && navigate('/home')}>
+							Entrar
+						</Button>
+						<Button colorScheme='blue' onClick={() => navigate('/novaconta')}>
+							Criar uma Conta
+						</Button>
+					</Stack>
+				</Box>
+			</form>
 		</DefaultTemplate>
 	);
 }
