@@ -1,4 +1,13 @@
-import { Box, Button, FormControl, FormErrorMessage, FormHelperText, FormLabel, Input, Stack } from '@chakra-ui/react';
+import {
+	Button,
+	Center,
+	FormControl,
+	FormErrorMessage,
+	FormHelperText,
+	FormLabel,
+	Input,
+	Stack,
+} from '@chakra-ui/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -15,7 +24,7 @@ const schema = object({
 	numeroResidencial: string(),
 });
 
-export function CadastroEnderecoForm() {
+export function PontoColetaForm() {
 	const {
 		register,
 		handleSubmit,
@@ -45,7 +54,7 @@ export function CadastroEnderecoForm() {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} noValidate>
-			<Box display='flex' justifyContent='center' margin='16px'>
+			<Center>
 				<Stack maxW='600px' width='100%'>
 					<FormControl isRequired isInvalid={!!errors.nomeDoEndereco}>
 						<FormLabel htmlFor='nomeDoEndereco'>Nome do endereço</FormLabel>
@@ -92,7 +101,7 @@ export function CadastroEnderecoForm() {
 						Cadastrar Endereço
 					</Button>
 				</Stack>
-			</Box>
+			</Center>
 		</form>
 	);
 }
