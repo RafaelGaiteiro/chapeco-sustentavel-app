@@ -1,6 +1,5 @@
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Box } from '@chakra-ui/react';
 import { Header } from '../../../../app/components/shared/Header';
-import { DefaultTemplate } from '../../../../app/components/templates/DefaultTheme';
 import { registeredAddress } from '../constants/registeredAddress';
 import { CadastroEnderecoForm } from './CadastroEnderecoForm';
 import { RegisteredAddressList } from './RegisteredAddressList';
@@ -9,7 +8,7 @@ export function ColetaSeletiva() {
 	const existeAoMenosUmEndereco = true;
 
 	return (
-		<DefaultTemplate>
+		<Box>
 			<Header toGoBack title='Coleta Seletiva' />
 			<Box>
 				{!existeAoMenosUmEndereco ? (
@@ -33,6 +32,6 @@ export function ColetaSeletiva() {
 				)}
 				<CadastroEnderecoForm />
 			</Box>
-		</DefaultTemplate>
+		</Box>
 	);
 }

@@ -1,12 +1,13 @@
 import { Box } from '@chakra-ui/react';
+import { Footer } from '../../../app/components/shared/Footer';
 import { Header } from '../../../app/components/shared/Header';
-import { DefaultTemplate } from '../../../app/components/templates/DefaultTheme';
 
 export function Configuracoes() {
 	return (
-		<DefaultTemplate defaultFooter>
+		<Box>
 			<Header toGoBack title='Configurações' />
 			<Box></Box>
-		</DefaultTemplate>
+			<Footer />
+		</Box>
 	);
 }

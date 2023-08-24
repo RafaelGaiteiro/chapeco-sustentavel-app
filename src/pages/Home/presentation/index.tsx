@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
+import { Footer } from '../../../app/components/shared/Footer';
 import { Header } from '../../../app/components/shared/Header';
-import { DefaultTemplate } from '../../../app/components/templates/DefaultTheme';
 import { ModuleBox } from './components/ModuleComponents/ModuleBox';
 import { ModuleButton } from './components/ModuleComponents/ModuleButton';
 import { Welcome } from './components/Welcome';
@@ -10,7 +10,7 @@ export function Home() {
 	const navigate = useNavigate();
 
 	return (
-		<DefaultTemplate defaultFooter>
+		<Box>
 			<Header time information configurations exit />
 			<Box display='flex' flexDirection='column' rowGap='16px' paddingTop='16px'>
 				<Welcome />
@@ -32,6 +32,7 @@ export function Home() {
 					/>
 				</ModuleBox>
 			</Box>
-		</DefaultTemplate>
+			<Footer />
+		</Box>
 	);
 }

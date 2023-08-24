@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { object, string } from 'yup';
 import { Header } from '../../../app/components/shared/Header';
-import { DefaultTemplate } from '../../../app/components/templates/DefaultTheme';
 
 const schema = object({
 	usuario: string().required('O usuário é obrigatório.'),
@@ -35,9 +34,9 @@ export function Login() {
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} noValidate>
-			<DefaultTemplate>
-				<Header title='Login' />
+		<Box>
+			<Header title='Login' />
+			<form onSubmit={handleSubmit(onSubmit)} noValidate>
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' padding='16px'>
 					<Stack border='1px' borderColor='gray.200' padding='20px' w='100%' maxW='600px' rounded='8px'>
 						<FormControl isRequired isInvalid={!!errors.usuario}>
@@ -61,7 +60,7 @@ export function Login() {
 						</Button>
 					</Stack>
 				</Box>
-			</DefaultTemplate>
-		</form>
+			</form>
+		</Box>
 	);
 }

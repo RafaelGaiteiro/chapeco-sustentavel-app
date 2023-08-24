@@ -35,7 +35,7 @@ const BoxButton = styled.div`
 	transition: all 0.2s ease-in-out;
 	max-width: 600px;
 
-	&:active {
+	&:hover {
 		cursor: pointer;
 		scale: 1.02;
 	}
