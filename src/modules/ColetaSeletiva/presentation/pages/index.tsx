@@ -1,6 +1,6 @@
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Box } from '@chakra-ui/react';
 import { Header } from '../../../../app/components/shared/Header';
-import { registeredAddress } from '../constants/registeredAddress';
+import { enderecosCadastrados } from '../constants/enderecosCadastrados';
 import { EnderecoColetaForm } from './EnderecoColetaForm';
 import { EnderecoColetaList } from './EnderecoColetaList';
 
@@ -28,7 +28,7 @@ export function ColetaSeletiva() {
 						<AlertDescription maxWidth='sm'>Registre um endereço utilizando o formulário abaixo.</AlertDescription>
 					</Alert>
 				) : (
-					<EnderecoColetaList registeredAddress={registeredAddress} />
+					<EnderecoColetaList enderecosCadastradosProps={enderecosCadastrados} />
 				)}
 				<EnderecoColetaForm />
 			</Box>

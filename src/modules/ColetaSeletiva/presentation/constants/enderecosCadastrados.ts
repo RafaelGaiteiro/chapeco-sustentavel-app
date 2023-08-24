@@ -1,10 +1,10 @@
-export type RegisteredAddressProps = {
+export type EnderecosCadastradosProps = {
 	adressName: string;
 	fullAddress: string;
 	collectionPeriod: string;
 };
 
-export const registeredAddress: RegisteredAddressProps[] = [
+export const enderecosCadastrados: EnderecosCadastradosProps[] = [
 	{
 		adressName: 'Minha casa',
 		collectionPeriod: 'Hoje a tarde',

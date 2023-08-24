@@ -2,6 +2,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import { ColetaSeletiva } from '../../modules/ColetaSeletiva/presentation/pages';
 import { Educativo } from '../../modules/Educativo/presentation/pages';
 import { PontoDeColeta } from '../../modules/PontoDeColeta/presentation/pages';
+import { PontoColetaForm } from '../../modules/PontoDeColeta/presentation/pages/PontoColetaForm';
+import { PontoColetaList } from '../../modules/PontoDeColeta/presentation/pages/PontoColetaList';
+import { PontoColetaUsuarioList } from '../../modules/PontoDeColeta/presentation/pages/PontoColetaUsuarioList';
 import { Configuracoes } from '../../pages/Configuracoes/presentation';
 import { Home } from '../../pages/Home/presentation';
 import { IdeiaDoUsuario } from '../../pages/IdeiaDoUsuario/presentation';
@@ -26,6 +29,18 @@ export const router = createBrowserRouter([
 	{
 		path: '/pontodecoleta',
 		element: <PontoDeColeta />,
+	},
+	{
+		path: '/pontodecoleta/pontos',
+		element: <PontoColetaList />,
+	},
+	{
+		path: '/pontodecoleta/pontos-usuario',
+		element: <PontoColetaUsuarioList />,
+	},
+	{
+		path: '/pontodecoleta/cadastro-ponto',
+		element: <PontoColetaForm />,
 	},
 	{
 		path: '/educativo',

@@ -1,21 +1,22 @@
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, Highlight, Text } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../../../../app/components/shared/Header';
 import { EnderecoColetaForm } from '../../../ColetaSeletiva/presentation/pages/EnderecoColetaForm';
-import { registeredAddress } from '../constants/registeredAddress';
-import { PontoColetaList } from './PontoColetaList';
+
 export function PontoDeColeta() {
 	const existeAoMenosUmEndereco = true;
+	const navigate = useNavigate();
 
 	return (
 		<Box>
-			<Header toGoBack title='Pontos De Coleta' />
+			<Header toGoBack title='Pontos de Coleta' />
 			<Box margin='16px'>
 				<Box marginBottom='16px'>
 					<Box>
 						<Box display='flex' flexDir='column' alignItems='center'>
 							<Text textAlign='center'>
-								Explore os pontos de coleta disponíveis em Chapecó - SC. Esses pontos, que podem ser permanentes ou
-								temporários, são geralmente parte de projetos dedicados à causa.
+								Explore os pontos de coleta disponíveis em Chapecó - SC. Os pontos podem ser permanentes ou temporários,
+								são geralmente parte de projetos dedicados à causa.
 							</Text>
 							<Highlight
 								query='Veja os pontos de coleta cadastrados.'
@@ -24,7 +25,7 @@ export function PontoDeColeta() {
 								Veja os pontos de coleta cadastrados.
 							</Highlight>
 						</Box>
-						<Button w='100%' colorScheme='blue' marginTop='8px'>
+						<Button w='100%' colorScheme='blue' marginTop='8px' onClick={() => navigate('/pontodecoleta/pontos')}>
 							Ver Pontos
 						</Button>
 					</Box>
@@ -65,7 +66,8 @@ export function PontoDeColeta() {
 						</AlertDescription>
 					</Alert>
 				) : (
-					<PontoColetaList registeredAddress={registeredAddress} />
+					// <PontoColetaList registeredAddress={registeredAddress} />
+					<div></div>
 				)}
 				<EnderecoColetaForm />
 			</Box>
