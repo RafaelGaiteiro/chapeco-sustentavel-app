@@ -6,11 +6,11 @@ import light from './src/assets/styles/themes/light';
 
 export function App() {
 	return (
-		<ThemeProvider theme={light}>
-			<ChakraProvider>
+		<ChakraProvider>
+			<ThemeProvider theme={light}>
 				<RouterProvider router={router} />
-				<GlobalStyle />
-			</ChakraProvider>
-		</ThemeProvider>
+			</ThemeProvider>
+			<GlobalStyle />
+		</ChakraProvider>
 	);
 }

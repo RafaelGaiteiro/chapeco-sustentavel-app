@@ -1,12 +1,13 @@
 import { Box } from '@chakra-ui/react';
 import { Header } from '../../app/components/shared/Header';
-import { DefaultTemplate } from '../../app/components/templates/DefaultTheme';
+import { Footer } from '../../app/components/shared/Footer';
 
 export function NovaConta() {
 	return (
-		<DefaultTemplate>
+		<Box>
 			<Header toGoBack title='Crie sua conta' />
 			<Box></Box>
-		</DefaultTemplate>
+			<Footer />
+		</Box>
 	);
 }

@@ -1,6 +1,6 @@
 {
     "name": "Chapecó Sustentável",
-    "short_name": "Chap. Sust.",
+    "short_name": "Chapecó Sustentável",
     "start_url": "https://chapeco-sustentavel.vercel.app",
     "display": "standalone",
     "description": "Chapecó Sustentável",
@@ -8,7 +8,7 @@
     "dir": "auto",
     "theme_color": "#42b983",
     "background_color": "#42b983",
-    "orientation": "any",
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",

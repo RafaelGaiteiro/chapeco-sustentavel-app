@@ -1,12 +1,13 @@
 import { Box } from '@chakra-ui/react';
+import { Footer } from '../../app/components/shared/Footer';
 import { Header } from '../../app/components/shared/Header';
-import { DefaultTemplate } from '../../app/components/templates/DefaultTheme';
 
 export function RecuperarSenha() {
 	return (
-		<DefaultTemplate>
+		<Box>
 			<Header toGoBack title='Recuperar Senha' />
 			<Box></Box>
-		</DefaultTemplate>
+			<Footer />
+		</Box>
 	);
 }
