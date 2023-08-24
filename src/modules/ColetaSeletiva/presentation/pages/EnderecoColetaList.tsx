@@ -1,15 +1,15 @@
 import { Button, Center, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
+import { RiEditFill } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import { BoxBorder } from '../../../../app/components/shared/BoxBorder';
-import { RegisteredAddressProps } from '../constants/registeredAddress';
-import { RiEditFill } from 'react-icons/ri';
+import { EnderecosCadastradosProps } from '../constants/enderecosCadastrados';
 
 type RegisteredAddressComponentProps = {
-	registeredAddress: RegisteredAddressProps[];
+	enderecosCadastradosProps: EnderecosCadastradosProps[];
 };
 
-export function EnderecoColetaList({ registeredAddress }: RegisteredAddressComponentProps) {
+export function EnderecoColetaList({ enderecosCadastradosProps }: RegisteredAddressComponentProps) {
 	const { colors } = useTheme();
 
 	return (
@@ -25,7 +25,7 @@ export function EnderecoColetaList({ registeredAddress }: RegisteredAddressCompo
 							</Tr>
 						</Thead>
 						<Tbody>
-							{registeredAddress.map(({ adressName, collectionPeriod }) => (
+							{enderecosCadastradosProps.map(({ adressName, collectionPeriod }) => (
 								<Tr
 									key={uuidv4()}
 									_hover={{ backgroundColor: colors.lightGray, borderRadius: '0.2s', transition: '0.5s' }}
