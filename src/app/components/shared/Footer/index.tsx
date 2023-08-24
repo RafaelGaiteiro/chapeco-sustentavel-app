@@ -19,6 +19,8 @@ export function Footer() {
 }
 
 const FooterStylized = styled.div`
+	position: fixed;
+	bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,10 +28,9 @@ const FooterStylized = styled.div`
 	padding: 16px;
 	text-align: center;
 	width: 100%;
-	background-color: ${({ theme }) => theme.colors.green};
+	background-color: ${({ theme }) => theme.colors.Green500};
 	border-radius: 24px 24px 0 0;
 	user-select: none;
-	height: 120px;
 `;
 
 const UserIdea = styled.div`

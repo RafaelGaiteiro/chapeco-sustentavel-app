@@ -46,7 +46,7 @@ const BoxGreen = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	padding: 16px;
-	background-color: ${({ theme }) => theme.colors.green};
+	background-color: ${({ theme }) => theme.colors.Green500};
 `;
 
 const BoxGray = styled.div`

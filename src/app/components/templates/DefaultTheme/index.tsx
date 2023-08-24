@@ -19,6 +19,6 @@ export function DefaultTemplate({ children, defaultFooter }: DefaultThemeProps) 
 const DefaultTemplateStylized = styled.div`
 	display: grid;
 	grid-template-areas: 'Header' 'Content' 'Footer';
-	grid-template-rows: 80px auto 120px;
-	height: 100vh;
+	grid-template-rows: 80px auto auto;
+	height: 100%;
 `;

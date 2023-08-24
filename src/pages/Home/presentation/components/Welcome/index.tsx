@@ -33,7 +33,7 @@ const WelcomeStylized = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: ${({ theme }) => theme.colors.green};
+	background-color: ${({ theme }) => theme.colors.Green500};
 	padding: 16px;
 	width: 90%;
 	max-width: 600px;
