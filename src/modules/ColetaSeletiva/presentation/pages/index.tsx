@@ -33,7 +33,7 @@ const schema = object({
 });
 
 export function ColetaSeletiva() {
-	const registeredAddresses = true;
+	const existeAoMenosUmEndereco = false;
 	const {
 		register,
 		handleSubmit,
@@ -66,7 +66,7 @@ export function ColetaSeletiva() {
 		<DefaultTemplate>
 			<Header toGoBack title='Coleta Seletiva' />
 			<Box>
-				{!registeredAddresses ? (
+				{!existeAoMenosUmEndereco ? (
 					<Alert
 						status='warning'
 						variant='subtle'
@@ -80,18 +80,10 @@ export function ColetaSeletiva() {
 						<AlertTitle mt={4} mb={1} fontSize='lg'>
 							Nenhum endereço cadastrado.
 						</AlertTitle>
-						<AlertDescription maxWidth='sm'>Cadastre agora um endereço pelo formulário abaixo.</AlertDescription>
+						<AlertDescription maxWidth='sm'>Registre um endereço utilizando o formulário abaixo.</AlertDescription>
 					</Alert>
 				) : (
-					<Box>
-						{registeredAddress.map((registeredAddress) => (
-							<RegisteredAddress
-								adressName={registeredAddress.adressName}
-								collectionPeriod={registeredAddress.collectionPeriod}
-								fullAddress={registeredAddress.fullAddress}
-							/>
-						))}
-					</Box>
+					<RegisteredAddress registeredAddress={registeredAddress} />
 				)}
 				<form onSubmit={handleSubmit(onSubmit)} noValidate>
 					<Box display='flex' justifyContent='center' padding='16px'>

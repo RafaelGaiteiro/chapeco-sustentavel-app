@@ -20,6 +20,5 @@ const DefaultTemplateStylized = styled.div`
 	display: grid;
 	grid-template-areas: 'Header' 'Content' 'Footer';
 	grid-template-rows: 80px auto 120px;
-	grid-row-gap: 16px;
 	height: 100vh;
 `;

@@ -1,4 +1,4 @@
-type RegisteredAddressProps = {
+export type RegisteredAddressProps = {
 	adressName: string;
 	fullAddress: string;
 	collectionPeriod: string;

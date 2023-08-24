@@ -1,21 +1,23 @@
 import { styled } from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
+import { RegisteredAddressProps } from '../../constants/registeredAddress';
 
-type RegisteredAddressProps = {
-	adressName: string;
-	fullAddress: string;
-	collectionPeriod: string;
+type RegisteredAddressComponentProps = {
+	registeredAddress: RegisteredAddressProps[];
 };
 
-export function RegisteredAddress({ adressName, collectionPeriod, fullAddress }: RegisteredAddressProps) {
+export function RegisteredAddress({ registeredAddress }: RegisteredAddressComponentProps) {
 	return (
 		<AddressContainer>
-			<RegisteredAddressBox>
-				<AddressBox>
-					<AddressName>{adressName}</AddressName>
-					<FullAddress>{collectionPeriod}</FullAddress>
-				</AddressBox>
-				<CollectionTime>{fullAddress}</CollectionTime>
-			</RegisteredAddressBox>
+			{registeredAddress.map(({ adressName, fullAddress, collectionPeriod }) => (
+				<RegisteredAddressBox key={uuidv4()}>
+					<AddressBox>
+						<AddressName>{adressName}</AddressName>
+						<FullAddress>{collectionPeriod}</FullAddress>
+					</AddressBox>
+					<CollectionTime>{fullAddress}</CollectionTime>
+				</RegisteredAddressBox>
+			))}
 		</AddressContainer>
 	);
 }
@@ -26,6 +28,7 @@ const AddressContainer = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	gap: 8px;
+	padding: 16px;
 `;
 
 const RegisteredAddressBox = styled.div`

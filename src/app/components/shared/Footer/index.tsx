@@ -6,8 +6,8 @@ import styled from 'styled-components';
 export function Footer() {
 	const navigate = useNavigate();
 	return (
-		<FooterStylized onClick={() => navigate('/ideiausuario')}>
-			<UserIdea>
+		<FooterStylized>
+			<UserIdea onClick={() => navigate('/ideiausuario')}>
 				<Box display='flex' justifyContent='center' alignItems='center' gap='8px'>
 					<Text fontSize='18px'>Gostaria de ver sua ideia aqui?</Text>
 					<FcIdea size={25} />
@@ -41,6 +41,7 @@ const UserIdea = styled.div`
 	padding: 8px 16px;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
+	user-select: none;
 
 	&&:hover {
 		background-color: rgba(255, 255, 255, 0.2);

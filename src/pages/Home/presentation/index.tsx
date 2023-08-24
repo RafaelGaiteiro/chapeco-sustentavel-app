@@ -12,7 +12,7 @@ export function Home() {
 	return (
 		<DefaultTemplate defaultFooter>
 			<Header time information configurations exit />
-			<Box display='flex' flexDirection='column' rowGap='16px'>
+			<Box display='flex' flexDirection='column' rowGap='16px' paddingTop='16px'>
 				<Welcome />
 				<ModuleBox>
 					<ModuleButton
