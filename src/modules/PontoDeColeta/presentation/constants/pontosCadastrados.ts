@@ -1,6 +1,8 @@
 type PontoDeColeta = {
 	nomeDoPonto: string;
 	tipo: 'Fixo' | 'Temporário';
+	inicio: string;
+	final?: string;
 	periodoDeColeta: string;
 	enderecoCompleto: string;
 	materiaisAceitos: string[];
@@ -15,9 +17,10 @@ type PontoDeColeta = {
 
 export const pontosCadastrados: PontoDeColeta[] = [
 	{
-		nomeDoPonto: ' ',
+		nomeDoPonto: 'Padaria Dona Ana',
 		tipo: 'Fixo',
-		periodoDeColeta: 'Hoje à tarde',
+		inicio: '24.09.2009',
+		periodoDeColeta: 'De segunda a sexta, das 8h às 18h',
 		enderecoCompleto: 'Rua São Geronimo, Bairro Esplanada, 610D, Chapecó',
 		materiaisAceitos: ['Plástico', 'Papel'],
 		responsavel: {
@@ -27,9 +30,11 @@ export const pontosCadastrados: PontoDeColeta[] = [
 		},
 	},
 	{
-		nomeDoPonto: 'Casa da Vó',
+		nomeDoPonto: 'Casa da Vó Maria',
 		tipo: 'Temporário',
-		periodoDeColeta: 'Amanhã pela manhã',
+		inicio: '24.09.2010',
+		final: '24.09.2010',
+		periodoDeColeta: 'De segunda a sexta, das 8h ás 12h',
 		enderecoCompleto: 'Rua dos Lírios, Bairro Jardim, 123A, Chapecó',
 		materiaisAceitos: ['Eletrônicos'],
 		responsavel: {
@@ -40,8 +45,9 @@ export const pontosCadastrados: PontoDeColeta[] = [
 	},
 	{
 		nomeDoPonto: 'ReciclaTech',
+		inicio: '24.09.2010',
 		tipo: 'Fixo',
-		periodoDeColeta: 'Todos os dias',
+		periodoDeColeta: 'Todos os dias, das 8h às 18h',
 		enderecoCompleto: 'Rua das Tecnologias, Bairro Inovação, 888E, Chapecó',
 		materiaisAceitos: ['Eletrônicos', 'Baterias'],
 		descricao: 'Ponto especializado em coleta de eletrônicos.',
@@ -54,8 +60,9 @@ export const pontosCadastrados: PontoDeColeta[] = [
 	},
 	{
 		nomeDoPonto: 'Escola Ambiental',
+		inicio: '24.09.2010',
 		tipo: 'Fixo',
-		periodoDeColeta: 'Segunda a Sexta',
+		periodoDeColeta: 'De Segunda a Sexta, das 8h às 21h',
 		enderecoCompleto: 'Avenida Educação, Bairro Estudante, 777F, Chapecó',
 		materiaisAceitos: ['Papel', 'Papelão', 'Plástico'],
 		responsavel: {
@@ -67,6 +74,8 @@ export const pontosCadastrados: PontoDeColeta[] = [
 	},
 	{
 		nomeDoPonto: 'ONG Salve o Planeta',
+		inicio: '24.09.2010',
+		final: '24.09.2010',
 		tipo: 'Temporário',
 		periodoDeColeta: 'Eventos mensais',
 		enderecoCompleto: 'Praça Central, Bairro Cidade, 999G, Chapecó',
