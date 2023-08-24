@@ -33,7 +33,7 @@ const schema = object({
 });
 
 export function ColetaSeletiva() {
-	const existeAoMenosUmEndereco = false;
+	const existeAoMenosUmEndereco = true;
 	const {
 		register,
 		handleSubmit,
