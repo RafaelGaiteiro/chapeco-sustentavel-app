@@ -40,44 +40,43 @@ export function PontoColetaList() {
 										</Text>
 										<Divider />
 										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
+											<Text fontWeight='bold'>Dias e horários para entrega: </Text>
 											{ponto.periodoDeColeta}
 										</Text>
 										<Divider />
-										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
-											{ponto.descricao}
-										</Text>
+										{ponto.descricao && (
+											<Text>
+												<Text fontWeight='bold'>Descrição: </Text>
+												{ponto.descricao}
+											</Text>
+										)}
 										<Divider />
 										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
-											{ponto.periodoDeColeta}
-										</Text>
-										<Divider />
-										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
-											{ponto.responsavel.contato}
-										</Text>{' '}
-										<Divider />
-										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
-											{ponto.responsavel.nome}
-										</Text>{' '}
-										<Divider />
-										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
-											{ponto.responsavel.tipo}
-										</Text>{' '}
-										<Divider />
-										<Text fontWeight='bold'>
-											Horários para entrega:
-											{ponto.responsavel.website}
-										</Text>{' '}
-										<Divider />
-										<Text>
-											<Text fontWeight='bold'>Horários para entrega: </Text>
+											<Text fontWeight='bold'>Tipo de Ponto: </Text>
 											{ponto.tipo}
-										</Text>{' '}
+										</Text>
+										<Divider />
+										<Text>
+											<Text fontWeight='bold'>Início do Projeto: </Text>
+											{ponto.inicio}
+										</Text>
+										{ponto.final && (
+											<>
+												<Divider />
+												<Text>
+													<Text fontWeight='bold'>Final do Projeto: </Text>
+													{ponto.final}
+												</Text>
+											</>
+										)}
+										<Divider />
+										<Text>
+											<Text fontWeight='bold'>Responsável: </Text>
+											<Text>{ponto.responsavel.nome}</Text>
+											<Text>{ponto.responsavel.contato}</Text>
+											<Text>{ponto.responsavel.tipo}</Text>
+											<Text>{ponto.responsavel.website}</Text>
+										</Text>
 									</CardBody>
 									<CardFooter>
 										<Button>Mains informações</Button>
