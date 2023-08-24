@@ -1,8 +1,8 @@
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Box } from '@chakra-ui/react';
 import { Header } from '../../../../app/components/shared/Header';
 import { registeredAddress } from '../constants/registeredAddress';
-import { CadastroEnderecoForm } from './CadastroEnderecoForm';
-import { RegisteredAddressList } from './RegisteredAddressList';
+import { EnderecoColetaForm } from './EnderecoColetaForm';
+import { EnderecoColetaList } from './EnderecoColetaList';
 
 export function ColetaSeletiva() {
 	const existeAoMenosUmEndereco = true;
@@ -28,9 +28,9 @@ export function ColetaSeletiva() {
 						<AlertDescription maxWidth='sm'>Registre um endereço utilizando o formulário abaixo.</AlertDescription>
 					</Alert>
 				) : (
-					<RegisteredAddressList registeredAddress={registeredAddress} />
+					<EnderecoColetaList registeredAddress={registeredAddress} />
 				)}
-				<CadastroEnderecoForm />
+				<EnderecoColetaForm />
 			</Box>
 		</Box>
 	);

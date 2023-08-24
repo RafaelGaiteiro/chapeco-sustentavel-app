@@ -9,7 +9,7 @@ type RegisteredAddressComponentProps = {
 	registeredAddress: RegisteredAddressProps[];
 };
 
-export function RegisteredAddressList({ registeredAddress }: RegisteredAddressComponentProps) {
+export function EnderecoColetaList({ registeredAddress }: RegisteredAddressComponentProps) {
 	const { colors } = useTheme();
 
 	return (
